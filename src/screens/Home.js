@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
-
+import Menu from "../component/Menu";
 
 const Home = (props) => {
 const description = "We are committed to providing quality education to learners worldwide. Our platform offers a wide range of courses, expert instructors, and flexible learning options to help you achieve your educational goals.";
@@ -22,6 +22,14 @@ const description = "We are committed to providing quality education to learners
       <Text style = {styles.paraStyle}>{ description }</Text>
     </View>
 
+   <View style={styles.menuStyle}>
+   <View style = {styles.lineStyle}></View>
+    <Menu/>
+    <View style = {[styles.lineStyle, {
+      marginVertical: 20,
+      },
+      ]}></View>
+   </View>
     </View>
   );
 }
@@ -66,7 +74,12 @@ const styles = StyleSheet.create({
   marginTop:30,
   paddingBottom:50,
   lineHeight: 26,
- }
+ },
+ lineStyle:{
+  margibBottom: 20,
+  borderWidth:0.5,
+  borderColor:"grey"
+ },
 });
 
 
