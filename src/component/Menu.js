@@ -1,5 +1,5 @@
 import React from "react";
-import {TouchableOpacity, View, StyleSheet,Text} from "react-native";
+import {TouchableOpacity, View, StyleSheet,Text, Image} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const Menu = () =>{
@@ -9,25 +9,41 @@ const Menu = () =>{
         <TouchableOpacity style={styles.buttonStyle} onPress = {
             ()=>navigation.navigate('Course')
         }>
-            <Text>Course</Text>
+            {/* <Text>Course</Text> */}
+            <Image
+            style={styles.iconStyle}
+                source={{uri:"https://img.icons8.com/stickers/90/000000/training.png",}}
+            />
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.buttonStyle} onPress = {
             ()=>navigation.navigate('Student')
         }>
-            <Text>Student</Text>
+            {/* <Text>Student</Text> */}
+            <Image
+            style={styles.iconStyle}
+                source={{uri:"https://img.icons8.com/stickers/100/000000/conference.png",}}
+            />
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.buttonStyle} onPress = {
             ()=>navigation.navigate('About')
         }>
-            <Text>About</Text>
+            {/* <Text>About</Text> */}
+            <Image
+            style={styles.iconStyle}
+                source={{uri:"https://img.icons8.com/stickers/100/000000/about.png",}}
+            />
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.buttonStyle} onPress = {
             ()=>navigation.navigate('Contact')
         }>
-            <Text>Contact</Text>
+            {/* <Text>Contact</Text> */}
+            <Image
+            style={styles.iconStyle}
+                source={{uri:"https://img.icons8.com/stickers/100/000000/phone-office.png",}}
+            />
         </TouchableOpacity>
         </View>
     );
@@ -42,6 +58,11 @@ const styles = StyleSheet.create({
     textStyle:{
         textTransform: 'uppercase',
         marginBottom: 50,
+    },
+    iconStyle:{
+        width: '100%',
+        height: 50,
+        aspectRatio: 1,
     }
 
 });
