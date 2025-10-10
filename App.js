@@ -8,26 +8,22 @@ import Contact from './src/screens/Contact';
 import About from './src/screens/About';
 import Course from './src/screens/Course';
 import UserData from './src/screens/UserData';
-import {  useFonts,  JosefinsSans_400Regular,  JosefinsSans_500Medium,
-} from '@expo-google-fonts/josefin-sans';
-import{
-  Nunito_600SemiBold,
-  Nunito_700Bold,
-} from '@expo-google-fonts/nunito';
+import { useFonts, JosefinSans_400Regular, JosefinSans_500Medium } from '@expo-google-fonts/josefin-sans';
+import{  Nunito_600SemiBold,  Nunito_700Bold} from '@expo-google-fonts/nunito';
 import AppLoading from 'expo-app-loading';
 
 export default function App() {
 
   const Stack = createNativeStackNavigator();
   let [fontsLoaded] = useFonts({
-    JosefinsSans_400Regular,
-    JosefinsSans_500Medium,
+    JosefinSans_400Regular,
+    JosefinSans_500Medium,
     Nunito_600SemiBold,
     Nunito_700Bold,
   });
 
   if(!fontsLoaded){
-   <AppLoading/>
+   return <AppLoading/>
   }
 
   return <NavigationContainer>

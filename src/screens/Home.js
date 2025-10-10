@@ -26,7 +26,7 @@ const description = "We are committed to providing quality education to learners
    <View style = {styles.lineStyle}></View>
     <Menu/>
     <View style = {[styles.lineStyle, {
-      marginVertical: 12,
+      marginVertical: 30,
       },
       ]}></View>
    </View>
@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
   fontSize: 30,
   color: '#344055',
   textTransform: 'uppercase',
+  fontFamily: 'Nunito_600SemiBold',
  },
 
  paraStyle:{
@@ -74,9 +75,10 @@ const styles = StyleSheet.create({
   marginTop:30,
   paddingBottom:50,
   lineHeight: 26,
+  fontFamily: 'JosefinSans_400Regular',
  },
  lineStyle:{
-  marginBottom: 32,
+  marginBottom: 5,
   borderWidth:0.5,
   borderColor:"grey"
  },
